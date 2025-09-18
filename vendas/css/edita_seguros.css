@@ -1,0 +1,10 @@
+button[name="adiar_venda"]{
+    color: #000;
+}
+button:hover, .button:hover, button[name="adiar_venda"]{
+    background: transparent url(../images/btn.png) repeat-x 0 0;
+}
+.container-margin{
+    margin: 20px 0;
+    height: 50px;
+}

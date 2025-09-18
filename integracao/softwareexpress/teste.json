@@ -1,0 +1,24 @@
+stdClass Object ( 
+[authorizer_code] => 00 
+[authorizer_message] => Transacao capturada com sucesso 
+[status] => CON 
+[nit] => 3d111384145aeddaf284f17a2313e399ee530191edc67696a14009f499a35fb1 
+[order_id] => 2022124237_C 
+[customer_receipt] => CREDITO - MASTER ESTAB: 34064579000178 DATA: 18/10/2022 HORA: 15:53:10 CODIGO PEDIDO: 2022124237_C ID TRANSACAO: 04f1abb1-d4d3-446d-8e8a-7c2fff8880f7 AUTORIZACAO: T77651 COD. AUTORIZACAO: T77651 VALOR: 82,50 (e-SiTef) 1a VIA - CLIENTE 
+[merchant_receipt] => CREDITO - MASTER ESTAB: 34064579000178 DATA: 18/10/2022 HORA: 15:53:10 CODIGO PEDIDO: 2022124237_C ID TRANSACAO: 04f1abb1-d4d3-446d-8e8a-7c2fff8880f7 AUTORIZACAO: T77651 COD. AUTORIZACAO: T77651 VALOR: 82,50 NSU e-SiTef: 221018792643460 (e-SiTef) 2a VIA - ESTABELECIMENTO 
+[authorizer_id] => 2 
+[acquirer_id] => 201 
+[acquirer_name] => Cielo e-Commerce 
+[authorizer_date] => 18/10/2022T15:53 
+[authorization_number] => T77651 
+[esitef_usn] => 221018792643460 
+[host_usn] => 465235 
+[tid] => 04f1abb1-d4d3-446d-8e8a-7c2fff8880f7 
+[amount] => 8250 
+[payment_type] => C 
+[authorizer_merchant_id] => 484e644e-053a-458e-b5f5-caf8e879e4ce 
+[payment_date] => 18/10/2022T15:53 
+[type] => P 
+[merchant_id] => 34064579000178 
+[creation_date] => 18/10/2022T15:53 
+[installments] => 1 )

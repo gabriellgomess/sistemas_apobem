@@ -1,0 +1,19 @@
+<?php header('Access-Control-Allow-Origin: *');?><p style='color: red; font-weight: bold'>Sistema operando em modo de homologação, nenhuma alteração será feita, todoas as informações mostradas são apenas em caráter informativo. Para alterar o ambiente entre produção e homologação, contate a área de tecnologia.</p><br><h3>Boletos pagos entre 04/03/2023 até 04/03/2023</h3><br><h1 style='color: lightgrey; font-weight: bold'>Não há boletos pagos para o período estipulado</h1><br><h1 style='color: lightgrey; font-weight: bold'>Não há boletos com vencimento para o período estipulado</h1><br><h3>Boletos com vencimento de 02/03/2023 até 02/03/2023</h3><br><b style='color: tomato'>BOLETO ATRASADO</b> <br>Link criptografado: <a href=https://www.apobem.com.br/portal/?data=K1Vwa2V1VkpaQk91SUhaU3R5NE1iMW50eDEvL0MyNmJOdHhEZnVyZEdqVGs0bEJ0WjNaUHBrUDZ4WGk4Rm1FZDo6kbD879ITISH%2BwYTDIzU4lg%3D%3D target='blank'>Link criptografado</a><br><a href=https://www.asaas.com/i/7756816100865018 target='blank'>Link do Boleto</a><br>Data da criação do boleto: 15/02/2023 | Data de vencimento: 20/02/2023<br>Total de parcelas: 7, Uma foi paga, sendo que 6 são relacionadas ao boleto<br>Boleto vencido, com parcelas fora do boleto<br>Boleto é atualizado como Vencido, não altera venda nem parcelas (HOMOLOGAÇÃO)<br><i>UPDATE `sys_vendas_transacoes_boleto` SET `status` = 'Boleto vencido', `description` = 'Boleto está em atraso - integrador.automático' WHERE `id_boleto` = 'pay_7756816100865018'</i><br><i>INSERT INTO `sistema`.`sys_vendas_registros_seg` (`registro_id`, `vendas_id`, `registro_usuario`, `registro_obs`, `registro_status`, `registro_data`) 
+                    VALUES (NULL, '118490','integrador.automatico','Boleto atualizado como vencido, venda alterada para inadimplente','88',NOW());</i><br>Atualizando a venda para inadimplente<br>Venda atualizada para inadimplente (HOMOLOGAÇÃO)<br><i>UPDATE `sys_vendas_seguros` SET `vendas_status` = '88' WHERE `vendas_id` = '118490'</i><br><p style='color: orange; margin: 0; padding: 0'>ALOCAÇÃO DE CLIENTES INADIMPLENTES EM CAMPANHA DE COBRANÇA</p>ID da venda: 118490<br>Username: integrador.automático<br>Vendas Banco: 11<br>ID do grupo da campanha: 12<br>*Conexão com o banco de dados encerrada.<br>*Conexão com o banco de dados do sistema de campanhas estabelecida.<br>Grupo de campanha: COBRANÇA Apobem<br>Campanha ativa: 1<br>Número de campanha ativa: 1<br>Espelha cliente 1<br>Cliente atualizado com sucesso na campanha! (HOMOLOGAÇÃO)<br>UPDATE sys_inss_clientes SET cliente_parecer = '100', cliente_usuario = 'integrador.automático', cliente_alteracao = NOW(), cliente_campanha_id = '5459' WHERE cliente_cpf='';<br>Inserindo acionamento: <br>Acionamento inserido com sucesso! (HOMOLOGAÇÃO)<br>INSERT INTO `sistema`.`sys_acionamentos` (`acionamento_id`, 
+                                    `clients_cpf`, 
+                                    `acionamento_usuario`, 
+                                    `acionamento_obs`, 
+                                    `acionamento_parecer`, 
+                                    `acionamento_empregador`, 
+                                    `acionamento_data`, 
+                                    `acionamento_campanha`,
+                                    `acionamento_equipe_id`) 
+                                    VALUES (NULL, 
+                                    '38217678715',
+                                    'integrador.automático',
+                                    ' (Campanha de destino: Grupo COBRANÇA Apobem - Nome: Cobranca Apobem 5459).',
+                                    '29',
+                                    'INSS',
+                                    NOW(),
+                                    '5459',
+                                    '94');<br><br><h1 style='color: lightgrey; font-weight: bold'>Total de boletos vencidos: 1</h1><br><h1 style='color: lightgrey; font-weight: bold'>Total de boletos vencidos: R$ 351,00</h1><br>

@@ -1,0 +1,190 @@
+<?php 
+$vendas_id = $_GET['vendas_id'];
+$venda = getVendaBy($vendas_id);
+$apolice = getApoliceById($venda->vendas_apolice);
+
+$debito_dados = (object) array(
+    "cpf" => $venda->cliente_cpf,
+    "username" => $username,
+    "user_id" => $user_id,
+    "venda_id" => $vendas_id,
+    "plano" => $apolice->apolice_nome
+);
+
+
+function getVendaBy($id)
+{
+    $sql = "SELECT * FROM sys_vendas_seguros WHERE vendas_id = '".$id."' LIMIT 0,1;";
+    $result = mysql_query($sql);
+    $venda_obj = mysql_fetch_object($result);
+    return $venda_obj;
+}
+function getApoliceById($id)
+{
+    $sql = "SELECT * FROM sys_vendas_apolices WHERE apolice_id = '".$id."' LIMIT 0,1;";
+    $result = mysql_query($sql);
+    $apolice_obj = mysql_fetch_object($result);
+    return $apolice_obj;
+}
+?>
+
+<div class="bloco_bloco">
+<div class="linha">
+    <h3 class="mypets2 openpet2" style="text-align:center" headerindex="9h">Débito Cartão:</h3>
+    <div class="thepet2" contentindex="9c" style="display: block;">
+        <div id="container_debito">
+            <div class="linha">
+                <div class="coluna campo-titulo">
+                    Cartão Administradora:
+                </div>
+                <div class="coluna campo-valor">
+                    <select id="card_adm" name="card_adm">
+                    <option value=''>--Cartão--</option>
+                    <?php 
+                        $sql_cartoes = "SELECT * FROM sys_vendas_cartoes";
+                        $result_cartoes = mysql_query($sql_cartoes) or die(mysql_error());
+                        while ($row_cartao = mysql_fetch_assoc($result_cartoes)):
+                    ?>
+                        <option value='<?php echo $row_cartao['codigo']; ?>'><?php echo $row_cartao['nome']; ?></option>
+                    <?php
+                        endwhile;
+                    ?>
+                    </select>
+                </div>
+            </div>
+            <div class="linha">
+                <div class="coluna campo-titulo">
+                    Cartão número:
+                </div>
+                <div class="coluna campo-valor">
+                    <input type="text" autocomplete="off" id="card_num" name="card_num" value="" size="19" maxlength="19" utils="numerico" />
+                </div>
+            </div>
+            <div class="linha">
+                <!-- VALIDADE -->
+                <div class="coluna campo-titulo">Validade:</div>
+                <div class="coluna campo-valor">
+                    <input type="text" id="card_validade_mes" name="card_validade_mes" value="" size="2" maxlength="2" utils="numerico" >&nbsp;(MM) 
+                    <input type="text" id="card_validade_ano" name="card_validade_ano" value="" size="4" maxlength="4" utils="numerico" >&nbsp;(AAAA)
+                </div>
+            </div>
+            <div class="linha">
+                <div class="coluna campo-titulo">
+                    Valor:
+                </div>
+                <div class="coluna campo-valor">
+                    <input type="text" id="transacao_valor" name="transacao_valor" value="0,00" utils="moeda">
+                </div>
+            </div>
+            <div class="linha">
+                <div id="resposta_transacao"></div>
+            </div>
+            <div class="linha">
+                <button id="realizar_cobranca" class="button">Realizar Cobrança</button>
+            </div>            
+        </div>        
+    </div>
+</div>
+</div>
+
+<script>
+var debito_dados = {    
+    cpf : <?php echo $debito_dados->cpf != "" ? "'".$debito_dados->cpf."'" : "''";  ; ?>,
+    username : <?php echo $debito_dados->username != "" ? "'".$debito_dados->username."'" : "''";  ; ?>,
+    user_id : <?php echo $debito_dados->user_id != "" ? "'".$debito_dados->user_id."'" : "''";  ; ?>,
+    venda_id : <?php echo $debito_dados->venda_id != "" ? "'".$debito_dados->venda_id."'" : "''";  ; ?>,
+    plano : <?php echo $debito_dados->plano != "" ? "'".$debito_dados->plano."'" : "''";  ; ?>
+}
+
+    $(document).on("click", "#realizar_cobranca", function(){
+        console.log(debito_dados);
+        var formData = new FormData();
+        var camposValidados = validaCamposCobranca();
+
+        if( camposValidados )
+        {
+            formData.append("cpf",      debito_dados.cpf );
+            formData.append("username", debito_dados.username );
+            formData.append("user_id",  debito_dados.user_id );
+            formData.append("venda_id", debito_dados.venda_id );
+            formData.append("plano",    debito_dados.plano );
+
+            formData.append("card_adm",         $("#card_adm").val() );
+            formData.append("card_num",         $("#card_num").val() );
+            formData.append("card_validade_mes",$("#card_validade_mes").val() );
+            formData.append("card_validade_ano",$("#card_validade_ano").val() );
+            formData.append("transacao_valor",  $("#transacao_valor").val() );
+            // for (var pair of formData.entries())
+            // {
+            //     console.log(pair[0]+ ', ' + pair[1]); 
+            // }
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4)
+                {
+                    if(this.status == 200){
+                        document.getElementById("resposta_transacao").innerHTML = this.responseText;
+                    }else{
+                        document.getElementById("resposta_transacao").innerHTML = "Erro: "+this.status;
+                    }
+                }
+            };
+            xhttp.open("POST", "https://www.grupofortune.com.br/integracao/softwareexpress/transacao_individual/request_transacao_individual.php?token=EsearR31234fpssa0vfc9o", true);
+            xhttp.send(formData);
+        }
+    });
+    function validaCamposCobranca()
+    {
+        if(debito_dados.cpf == "")
+        {            
+            custom_message("Erro: O CPF do cliente não pôde ser identificado.");
+            return false;
+        }
+        if(debito_dados.username == "")
+        {            
+            custom_message("Erro: O username do consultor não pôde ser identificado.");
+            return false;
+        }if(debito_dados.user_id == "")
+        {            
+            custom_message("Erro: O user_id do consultor não pôde ser identificado.");
+            return false;
+        }if(debito_dados.venda_id == "")
+        {            
+            custom_message("Erro: O id da venda não pôde ser identificado.");
+            return false;
+        }if(debito_dados.plano == "")
+        {            
+            custom_message("Erro: O plano do cliente não pôde ser identificado.");
+            return false;
+        }
+
+
+        if($("#card_adm").val() == "")
+        {
+            custom_alert("Selecione a administradora do cartão.");
+            return false;
+        }
+        if($("#card_num").val() == "")
+        {
+            custom_alert("Preencha o número do cartão.");
+            return false;
+        }
+        if($("#card_validade_mes").val() == "")
+        {
+            custom_alert("Preencha o mês de validade do cartão.");
+            return false;
+        }
+        if($("#card_validade_ano").val().length < 4)
+        {
+            custom_alert("Preencha o ano de validade do cartão.");
+            return false;
+        }
+        if($("#transacao_valor").val() == "0,00")
+        {
+            custom_alert("Informe um valor para cobrança.");
+            return false;
+        }
+        return true;
+    }
+</script>

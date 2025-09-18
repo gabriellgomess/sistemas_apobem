@@ -1,0 +1,301 @@
+[2025-06-18 19:48:04] Debug atualiza_transacao.php - POST recebido: Array
+(
+    [transacao_status] => CON
+    [transaction_nit] => 8a835a88928214fe40658392543d1a40f49a82ae59e682d5289a7a342858e2ee
+    [transaction_id] => 2022179517_C
+    [transacao_ids] => 118110_20250618190652_42_2
+)
+
+[2025-06-18 19:48:04] transaction_id: 2022179517_C
+[2025-06-18 19:48:04] transaction_nit: 8a835a88928214fe40658392543d1a40f49a82ae59e682d5289a7a342858e2ee
+[2025-06-18 19:48:04] transacao_status: CON
+[2025-06-18 19:48:04] transacao_ids: 118110_20250618190652_42_2
+[2025-06-18 19:48:04] Entrando no bloco de confirmação da transação
+[2025-06-18 19:48:04] Processando transacao_id: 118110_20250618190652_42_2
+[2025-06-18 19:48:04] SQL Select: SELECT vendas_valor FROM sys_vendas_transacoes_seg 
+						INNER JOIN sys_vendas_seguros ON transacao_id_venda = vendas_id 
+						WHERE transacao_id = '118110_20250618190652_42_2'
+[2025-06-18 19:48:04] Valor encontrado: 82.5
+[2025-06-18 19:48:04] SQL Update: UPDATE sys_vendas_transacoes_seg 
+			SET transacao_recebido = '1', 
+			transacao_motivo = 0, 
+			transacao_valor = '82.5', 
+			transacao_data = '2025-06-18' 
+			WHERE transacao_id = '118110_20250618190652_42_2'
+[2025-06-18 19:48:04] Update executado com sucesso
+[2025-06-18 19:48:04] SQL Update TEF: UPDATE sys_vendas_transacoes_tef
+	SET transacao_nit = '8a835a88928214fe40658392543d1a40f49a82ae59e682d5289a7a342858e2ee',
+	transacao_status = 'CON' 
+	WHERE transacao_id = '2022179517_C'
+[2025-06-18 19:48:04] Transação TEF atualizada com sucesso
+[2025-06-25 15:25:26] Debug atualiza_transacao.php - POST recebido: Array
+(
+    [transacao_status] => CON
+    [transaction_nit] => d1926b1ef8866ca2105209a64b2df0e4bb6f80597c3c7a04739b7ccd66cdd5bc
+    [transaction_id] => 2022179624_C
+    [transacao_ids] => 114285_20250314080304_46_2,114285_20250314080304_46_2
+)
+
+[2025-06-25 15:25:26] transaction_id: 2022179624_C
+[2025-06-25 15:25:26] transaction_nit: d1926b1ef8866ca2105209a64b2df0e4bb6f80597c3c7a04739b7ccd66cdd5bc
+[2025-06-25 15:25:26] transacao_status: CON
+[2025-06-25 15:25:26] transacao_ids: 114285_20250314080304_46_2,114285_20250314080304_46_2
+[2025-06-25 15:25:26] Entrando no bloco de confirmação da transação
+[2025-06-25 15:25:26] Processando transacao_id: 114285_20250314080304_46_2
+[2025-06-25 15:25:26] SQL Select: SELECT vendas_valor FROM sys_vendas_transacoes_seg 
+						INNER JOIN sys_vendas_seguros ON transacao_id_venda = vendas_id 
+						WHERE transacao_id = '114285_20250314080304_46_2'
+[2025-06-25 15:25:26] Valor encontrado: 58.5
+[2025-06-25 15:25:26] SQL Update: UPDATE sys_vendas_transacoes_seg 
+			SET transacao_recebido = '1', 
+			transacao_motivo = 0, 
+			transacao_valor = '58.5', 
+			transacao_data = '2025-06-25' 
+			WHERE transacao_id = '114285_20250314080304_46_2'
+[2025-06-25 15:25:26] Update executado com sucesso
+[2025-06-25 15:25:26] Processando transacao_id: 114285_20250314080304_46_2
+[2025-06-25 15:25:26] SQL Select: SELECT vendas_valor FROM sys_vendas_transacoes_seg 
+						INNER JOIN sys_vendas_seguros ON transacao_id_venda = vendas_id 
+						WHERE transacao_id = '114285_20250314080304_46_2'
+[2025-06-25 15:25:26] Valor encontrado: 58.5
+[2025-06-25 15:25:26] SQL Update: UPDATE sys_vendas_transacoes_seg 
+			SET transacao_recebido = '1', 
+			transacao_motivo = 0, 
+			transacao_valor = '58.5', 
+			transacao_data = '2025-06-25' 
+			WHERE transacao_id = '114285_20250314080304_46_2'
+[2025-06-25 15:25:26] Update executado com sucesso
+[2025-06-25 15:25:26] SQL Update TEF: UPDATE sys_vendas_transacoes_tef
+	SET transacao_nit = 'd1926b1ef8866ca2105209a64b2df0e4bb6f80597c3c7a04739b7ccd66cdd5bc',
+	transacao_status = 'CON' 
+	WHERE transacao_id = '2022179624_C'
+[2025-06-25 15:25:26] Transação TEF atualizada com sucesso
+[2025-06-25 17:37:22] Debug atualiza_transacao.php - POST recebido: Array
+(
+    [transacao_status] => CON
+    [transaction_nit] => 835091cbeeeba10d3ff401f41e3a90eae30e4567db85a17c815262af49868efe
+    [transaction_id] => 2022179625_C
+    [transacao_ids] => 112672_20250625170636_51_2
+)
+
+[2025-06-25 17:37:22] transaction_id: 2022179625_C
+[2025-06-25 17:37:22] transaction_nit: 835091cbeeeba10d3ff401f41e3a90eae30e4567db85a17c815262af49868efe
+[2025-06-25 17:37:22] transacao_status: CON
+[2025-06-25 17:37:22] transacao_ids: 112672_20250625170636_51_2
+[2025-06-25 17:37:22] Entrando no bloco de confirmação da transação
+[2025-06-25 17:37:22] Processando transacao_id: 112672_20250625170636_51_2
+[2025-06-25 17:37:22] SQL Select: SELECT vendas_valor FROM sys_vendas_transacoes_seg 
+						INNER JOIN sys_vendas_seguros ON transacao_id_venda = vendas_id 
+						WHERE transacao_id = '112672_20250625170636_51_2'
+[2025-06-25 17:37:22] Valor encontrado: 29.5
+[2025-06-25 17:37:22] SQL Update: UPDATE sys_vendas_transacoes_seg 
+			SET transacao_recebido = '1', 
+			transacao_motivo = 0, 
+			transacao_valor = '29.5', 
+			transacao_data = '2025-06-25' 
+			WHERE transacao_id = '112672_20250625170636_51_2'
+[2025-06-25 17:37:22] Update executado com sucesso
+[2025-06-25 17:37:22] SQL Update TEF: UPDATE sys_vendas_transacoes_tef
+	SET transacao_nit = '835091cbeeeba10d3ff401f41e3a90eae30e4567db85a17c815262af49868efe',
+	transacao_status = 'CON' 
+	WHERE transacao_id = '2022179625_C'
+[2025-06-25 17:37:22] Transação TEF atualizada com sucesso
+[2025-06-26 13:05:03] Debug atualiza_transacao.php - POST recebido: Array
+(
+    [transacao_status] => NEG
+    [transaction_nit] => 413e8347ae89df10e86b3c755ed538eaeb11e50ed6fa57439764706a15c4dd0f
+    [transaction_id] => 2022179640_C
+    [transacao_ids] => 121216_20250610080605_30_2
+)
+
+[2025-06-26 13:05:03] transaction_id: 2022179640_C
+[2025-06-26 13:05:03] transaction_nit: 413e8347ae89df10e86b3c755ed538eaeb11e50ed6fa57439764706a15c4dd0f
+[2025-06-26 13:05:03] transacao_status: NEG
+[2025-06-26 13:05:03] transacao_ids: 121216_20250610080605_30_2
+[2025-06-26 13:05:03] SQL Update TEF: UPDATE sys_vendas_transacoes_tef
+	SET transacao_nit = '413e8347ae89df10e86b3c755ed538eaeb11e50ed6fa57439764706a15c4dd0f',
+	transacao_status = 'NEG' 
+	WHERE transacao_id = '2022179640_C'
+[2025-06-26 13:05:03] Transação TEF atualizada com sucesso
+[2025-06-26 15:57:40] Debug atualiza_transacao.php - POST recebido: Array
+(
+    [transacao_status] => CON
+    [transaction_nit] => c53429ea5ab8530f9387e2353fa0a30429947be2488fbc96674f9813bfe0c17f
+    [transaction_id] => 2022179641_C
+    [transacao_ids] => 118451_20250616080606_40_2,118451_20250516080506_39_2
+)
+
+[2025-06-26 15:57:40] transaction_id: 2022179641_C
+[2025-06-26 15:57:40] transaction_nit: c53429ea5ab8530f9387e2353fa0a30429947be2488fbc96674f9813bfe0c17f
+[2025-06-26 15:57:40] transacao_status: CON
+[2025-06-26 15:57:40] transacao_ids: 118451_20250616080606_40_2,118451_20250516080506_39_2
+[2025-06-26 15:57:40] Entrando no bloco de confirmação da transação
+[2025-06-26 15:57:40] Processando transacao_id: 118451_20250616080606_40_2
+[2025-06-26 15:57:40] SQL Select: SELECT vendas_valor FROM sys_vendas_transacoes_seg 
+						INNER JOIN sys_vendas_seguros ON transacao_id_venda = vendas_id 
+						WHERE transacao_id = '118451_20250616080606_40_2'
+[2025-06-26 15:57:40] Valor encontrado: 82.5
+[2025-06-26 15:57:40] SQL Update: UPDATE sys_vendas_transacoes_seg 
+			SET transacao_recebido = '1', 
+			transacao_motivo = 0, 
+			transacao_valor = '82.5', 
+			transacao_data = '2025-06-26' 
+			WHERE transacao_id = '118451_20250616080606_40_2'
+[2025-06-26 15:57:40] Update executado com sucesso
+[2025-06-26 15:57:40] Processando transacao_id: 118451_20250516080506_39_2
+[2025-06-26 15:57:40] SQL Select: SELECT vendas_valor FROM sys_vendas_transacoes_seg 
+						INNER JOIN sys_vendas_seguros ON transacao_id_venda = vendas_id 
+						WHERE transacao_id = '118451_20250516080506_39_2'
+[2025-06-26 15:57:40] Valor encontrado: 82.5
+[2025-06-26 15:57:40] SQL Update: UPDATE sys_vendas_transacoes_seg 
+			SET transacao_recebido = '1', 
+			transacao_motivo = 0, 
+			transacao_valor = '82.5', 
+			transacao_data = '2025-06-26' 
+			WHERE transacao_id = '118451_20250516080506_39_2'
+[2025-06-26 15:57:40] Update executado com sucesso
+[2025-06-26 15:57:40] SQL Update TEF: UPDATE sys_vendas_transacoes_tef
+	SET transacao_nit = 'c53429ea5ab8530f9387e2353fa0a30429947be2488fbc96674f9813bfe0c17f',
+	transacao_status = 'CON' 
+	WHERE transacao_id = '2022179641_C'
+[2025-06-26 15:57:40] Transação TEF atualizada com sucesso
+[2025-08-21 18:44:24] Debug atualiza_transacao.php - POST recebido: Array
+(
+    [transacao_status] => NEG
+    [transaction_nit] => df5c740a5acd61b579fd844171e003fa56efe5376026d31ec804f482bead0c8e
+    [transaction_id] => 2022180281_C
+    [transacao_ids] => 135279_2025-05-28_4_2_C
+)
+
+[2025-08-21 18:44:24] transaction_id: 2022180281_C
+[2025-08-21 18:44:24] transaction_nit: df5c740a5acd61b579fd844171e003fa56efe5376026d31ec804f482bead0c8e
+[2025-08-21 18:44:24] transacao_status: NEG
+[2025-08-21 18:44:24] transacao_ids: 135279_2025-05-28_4_2_C
+[2025-08-21 18:44:24] SQL Update TEF: UPDATE sys_vendas_transacoes_tef
+	SET transacao_nit = 'df5c740a5acd61b579fd844171e003fa56efe5376026d31ec804f482bead0c8e',
+	transacao_status = 'NEG' 
+	WHERE transacao_id = '2022180281_C'
+[2025-08-21 18:44:24] Transação TEF atualizada com sucesso
+[2025-08-22 14:19:06] Debug atualiza_transacao.php - POST recebido: Array
+(
+    [transacao_status] => NEG
+    [transaction_nit] => bc50132fb0a4cf5e0aae065bce19cc2a0b68d2eb5d238c61681360de700398dc
+    [transaction_id] => 2022180296_C
+    [transacao_ids] => 117493_20250417080415_40_2,117493_20250317080314_39_2,117493_20250417080415_40_2,117493_20250317080314_39_2
+)
+
+[2025-08-22 14:19:06] transaction_id: 2022180296_C
+[2025-08-22 14:19:06] transaction_nit: bc50132fb0a4cf5e0aae065bce19cc2a0b68d2eb5d238c61681360de700398dc
+[2025-08-22 14:19:06] transacao_status: NEG
+[2025-08-22 14:19:06] transacao_ids: 117493_20250417080415_40_2,117493_20250317080314_39_2,117493_20250417080415_40_2,117493_20250317080314_39_2
+[2025-08-22 14:19:06] SQL Update TEF: UPDATE sys_vendas_transacoes_tef
+	SET transacao_nit = 'bc50132fb0a4cf5e0aae065bce19cc2a0b68d2eb5d238c61681360de700398dc',
+	transacao_status = 'NEG' 
+	WHERE transacao_id = '2022180296_C'
+[2025-08-22 14:19:06] Transação TEF atualizada com sucesso
+[2025-08-22 14:20:27] Debug atualiza_transacao.php - POST recebido: Array
+(
+    [transacao_status] => NEG
+    [transaction_nit] => df403f33cb75a731c95978ff9c23c06ac090504fddbe49b00d0d79624b56cfb1
+    [transaction_id] => 2022180297_C
+    [transacao_ids] => 107659_20250807000000_64_2
+)
+
+[2025-08-22 14:20:27] transaction_id: 2022180297_C
+[2025-08-22 14:20:27] transaction_nit: df403f33cb75a731c95978ff9c23c06ac090504fddbe49b00d0d79624b56cfb1
+[2025-08-22 14:20:27] transacao_status: NEG
+[2025-08-22 14:20:27] transacao_ids: 107659_20250807000000_64_2
+[2025-08-22 14:20:27] SQL Update TEF: UPDATE sys_vendas_transacoes_tef
+	SET transacao_nit = 'df403f33cb75a731c95978ff9c23c06ac090504fddbe49b00d0d79624b56cfb1',
+	transacao_status = 'NEG' 
+	WHERE transacao_id = '2022180297_C'
+[2025-08-22 14:20:27] Transação TEF atualizada com sucesso
+[2025-08-22 17:26:44] Debug atualiza_transacao.php - POST recebido: Array
+(
+    [transacao_status] => CON
+    [transaction_nit] => 6cfb209a2e8a1a5a699688efb66e6cdf3327082c13703cf8898c81c401c9755d
+    [transaction_id] => 2022180301_C
+    [transacao_ids] => 118451_20250816080805_42_2
+)
+
+[2025-08-22 17:26:44] transaction_id: 2022180301_C
+[2025-08-22 17:26:44] transaction_nit: 6cfb209a2e8a1a5a699688efb66e6cdf3327082c13703cf8898c81c401c9755d
+[2025-08-22 17:26:44] transacao_status: CON
+[2025-08-22 17:26:44] transacao_ids: 118451_20250816080805_42_2
+[2025-08-22 17:26:44] Entrando no bloco de confirmação da transação
+[2025-08-22 17:26:44] Processando transacao_id: 118451_20250816080805_42_2
+[2025-08-22 17:26:44] SQL Select: SELECT vendas_valor FROM sys_vendas_transacoes_seg 
+						INNER JOIN sys_vendas_seguros ON transacao_id_venda = vendas_id 
+						WHERE transacao_id = '118451_20250816080805_42_2'
+[2025-08-22 17:26:44] Valor encontrado: 82.5
+[2025-08-22 17:26:44] SQL Update: UPDATE sys_vendas_transacoes_seg 
+			SET transacao_recebido = '1', 
+			transacao_motivo = 0, 
+			transacao_valor = '82.5', 
+			transacao_data = '2025-08-22' 
+			WHERE transacao_id = '118451_20250816080805_42_2'
+[2025-08-22 17:26:44] Update executado com sucesso
+[2025-08-22 17:26:44] SQL Update TEF: UPDATE sys_vendas_transacoes_tef
+	SET transacao_nit = '6cfb209a2e8a1a5a699688efb66e6cdf3327082c13703cf8898c81c401c9755d',
+	transacao_status = 'CON' 
+	WHERE transacao_id = '2022180301_C'
+[2025-08-22 17:26:44] Transação TEF atualizada com sucesso
+[2025-08-22 17:41:07] Debug atualiza_transacao.php - POST recebido: Array
+(
+    [transacao_status] => CON
+    [transaction_nit] => 99475c26644a5b7a2ac5a4b13f9ec14162ffc408e8acf18b54b79a8c7908e5c8
+    [transaction_id] => 2022180302_C
+    [transacao_ids] => 114285_20250414080404_47_2,114285_20250414080404_47_2
+)
+
+[2025-08-22 17:41:07] transaction_id: 2022180302_C
+[2025-08-22 17:41:07] transaction_nit: 99475c26644a5b7a2ac5a4b13f9ec14162ffc408e8acf18b54b79a8c7908e5c8
+[2025-08-22 17:41:07] transacao_status: CON
+[2025-08-22 17:41:07] transacao_ids: 114285_20250414080404_47_2,114285_20250414080404_47_2
+[2025-08-22 17:41:07] Entrando no bloco de confirmação da transação
+[2025-08-22 17:41:07] Processando transacao_id: 114285_20250414080404_47_2
+[2025-08-22 17:41:07] SQL Select: SELECT vendas_valor FROM sys_vendas_transacoes_seg 
+						INNER JOIN sys_vendas_seguros ON transacao_id_venda = vendas_id 
+						WHERE transacao_id = '114285_20250414080404_47_2'
+[2025-08-22 17:41:07] Valor encontrado: 58.5
+[2025-08-22 17:41:07] SQL Update: UPDATE sys_vendas_transacoes_seg 
+			SET transacao_recebido = '1', 
+			transacao_motivo = 0, 
+			transacao_valor = '58.5', 
+			transacao_data = '2025-08-22' 
+			WHERE transacao_id = '114285_20250414080404_47_2'
+[2025-08-22 17:41:07] Update executado com sucesso
+[2025-08-22 17:41:07] Processando transacao_id: 114285_20250414080404_47_2
+[2025-08-22 17:41:07] SQL Select: SELECT vendas_valor FROM sys_vendas_transacoes_seg 
+						INNER JOIN sys_vendas_seguros ON transacao_id_venda = vendas_id 
+						WHERE transacao_id = '114285_20250414080404_47_2'
+[2025-08-22 17:41:07] Valor encontrado: 58.5
+[2025-08-22 17:41:07] SQL Update: UPDATE sys_vendas_transacoes_seg 
+			SET transacao_recebido = '1', 
+			transacao_motivo = 0, 
+			transacao_valor = '58.5', 
+			transacao_data = '2025-08-22' 
+			WHERE transacao_id = '114285_20250414080404_47_2'
+[2025-08-22 17:41:07] Update executado com sucesso
+[2025-08-22 17:41:07] SQL Update TEF: UPDATE sys_vendas_transacoes_tef
+	SET transacao_nit = '99475c26644a5b7a2ac5a4b13f9ec14162ffc408e8acf18b54b79a8c7908e5c8',
+	transacao_status = 'CON' 
+	WHERE transacao_id = '2022180302_C'
+[2025-08-22 17:41:07] Transação TEF atualizada com sucesso
+[2025-08-29 18:54:56] Debug atualiza_transacao.php - POST recebido: Array
+(
+    [transacao_status] => NEG
+    [transaction_nit] => 89ff83ae7ae6be1ce597fd63864d4fb0af3d5dcc31854c2644d83cdcd26270fd
+    [transaction_id] => 2022180377_C
+    [transacao_ids] => 113261_20250816080814_53_2
+)
+
+[2025-08-29 18:54:56] transaction_id: 2022180377_C
+[2025-08-29 18:54:56] transaction_nit: 89ff83ae7ae6be1ce597fd63864d4fb0af3d5dcc31854c2644d83cdcd26270fd
+[2025-08-29 18:54:56] transacao_status: NEG
+[2025-08-29 18:54:56] transacao_ids: 113261_20250816080814_53_2
+[2025-08-29 18:54:56] SQL Update TEF: UPDATE sys_vendas_transacoes_tef
+	SET transacao_nit = '89ff83ae7ae6be1ce597fd63864d4fb0af3d5dcc31854c2644d83cdcd26270fd',
+	transacao_status = 'NEG' 
+	WHERE transacao_id = '2022180377_C'
+[2025-08-29 18:54:56] Transação TEF atualizada com sucesso

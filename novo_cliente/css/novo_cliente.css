@@ -1,0 +1,120 @@
+select,
+textarea,
+input[type='text'],
+input[type='password'],
+input[type='url'],
+input[type='email'] {
+    background: #fff;
+    border: 1px solid #d1d1d1;
+    color: #444;
+    font-size: 15px;
+    line-height: 1.1;
+    height: 34px !important;
+    padding: 10px 20px 3px 20px !important;
+    max-width: 100% !important;
+    border-radius: 16px;
+}
+
+button[disabled], input[disabled], select[disabled], textarea[disabled]{
+   cursor: default;
+   color: #999;
+   background: #ececec;
+}
+
+input:focus {
+    border: 1px solid #444 !important;
+}
+
+.input-group {
+    position: relative;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.input-group input {
+    transition: .3s;
+    padding: 10px 20px 3px 20px !important;
+}
+
+.input-group label {
+    position: absolute;
+    background: #fff;
+    top: 6px;
+    left: 17px;
+    padding: 0px 5px;
+    pointer-events: none;
+    transition: .3s;
+}
+
+.input-group input.filled + label,
+.input-group input:focus + label {
+    top: -7px;
+    padding: 0 5px;
+    font-size: 14px;
+    color: #444444;
+    line-height: 14px;
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #d1d1d1;
+
+}
+
+.input-group select.filled+label, .input-group textarea+label,
+.input-group select:focus+label {
+    top: -7px;
+    padding: 0 5px;
+    font-size: 14px;
+    color: #444444;
+    line-height: 14px;
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #d1d1d1;
+
+}
+
+label {
+    font-size: 12px !important;
+    font-weight: 400;
+    padding: 0 6px 0 0;
+}
+
+.button-disabled-venda {
+    background: #ebeae8 !important;
+    color: #a19b9b !important;
+    cursor: not-allowed !important;
+}
+
+.space-divider-venda {
+   margin-top: 25px;
+   margin-bottom: 25px;
+   border-bottom: 2px solid #444;
+}
+
+.space-divider-linha {
+   border-bottom: 1px solid #cccccc;
+}
+
+.linha_flex {
+   display: flex;
+   width: 100%;
+   align-items: center;
+   gap: 5px;
+   background: #fbfaf6;
+   border-bottom-style: none;
+}
+
+h4{
+   margin-bottom: 10px !important;
+}
+
+#form_cliente input, 
+#form_cliente select, 
+#form_cliente textarea,
+#form_seguros input,
+#form_seguros select,
+#form_seguros textarea,
+#form_consig input,
+#form_consig select,
+#form_consig textarea{
+   font-size: 13px !important;
+}
